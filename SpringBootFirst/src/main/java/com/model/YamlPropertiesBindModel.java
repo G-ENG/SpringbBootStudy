@@ -2,24 +2,40 @@ package com.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-
-import java.sql.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @ClassName YamlModel
- * @Description 测试 Application.yml 配置
+ * @Description 测试 Application.yml 配置，使用属性绑定到 javaBean（setter 方式）
  * @Author ceaome
  * @Date 2020/9/21
  **/
 @Component
-@ConfigurationProperties()
-public class YamlModel {
+@ConfigurationProperties("person")
+public class YamlPropertiesBindModel {
     private String name;
     private int age;
     private double height;
     private Date birth;
     private List<String> girlFriend;
+    private Set<String> boyFriend;
+    private Son son;
+
+    public Set<String> getBoyFriend() {
+        return boyFriend;
+    }
+
+    public void setBoyFriend(Set<String> boyFriend) {
+        this.boyFriend = boyFriend;
+    }
+
+    public Son getSon() {
+        return son;
+    }
+
+    public void setSon(Son son) {
+        this.son = son;
+    }
 
     public String getName() {
         return name;
@@ -60,4 +76,5 @@ public class YamlModel {
     public void setGirlFriend(List<String> girlFriend) {
         this.girlFriend = girlFriend;
     }
+
 }

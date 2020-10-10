@@ -1,1 +1,17 @@
 person:
+  name: 某某字符串\n不需要加引号（单引号与不加引号等价，双引号不转义特殊字符）
+  age: 18
+  height: 175.5
+  girlFriend:
+    - 女一号
+    - 女二号
+  boyFriend: [男一号, 男二号]
+  teacher: {小学: 杨老师,中学: 王老师}
+  #  只支持以下时间、日期格式
+  birth: 1998/07/28 12:12:12
+  son:
+    -name: 小儿子
+    -sex: 男
+person2:
+  name: 某某字符串\n不需要加引号
+
