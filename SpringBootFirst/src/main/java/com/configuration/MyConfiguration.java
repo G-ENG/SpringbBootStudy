@@ -1,7 +1,10 @@
 package com.configuration;
 
+import com.model.YamlBean;
 import com.model.YamlConstructorBindModel;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -14,5 +17,10 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties({YamlConstructorBindModel.class})
 public class MyConfiguration {
 
+    @Bean
+    @ConfigurationProperties("person3")
+    public YamlBean getYamlBean(){
+        return new YamlBean();
+    }
 
 }

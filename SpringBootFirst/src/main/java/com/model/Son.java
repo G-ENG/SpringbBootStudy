@@ -1,8 +1,7 @@
 package com.model;
 
 /**
- * @ClassName Son
- * @Description TODO
+
  * @Author ceaome
  * @Date 2020/9/21
  **/
@@ -24,5 +23,13 @@ public class Son {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Son{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }

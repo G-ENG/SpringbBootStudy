@@ -77,4 +77,17 @@ public class YamlPropertiesBindModel {
         this.girlFriend = girlFriend;
     }
 
+
+    @Override
+    public String toString() {
+        return "YamlPropertiesBindModel{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", height=" + height +
+                ", birth=" + birth +
+                ", girlFriend=" + girlFriend +
+                ", boyFriend=" + boyFriend +
+                ", son=" + son +
+                '}';
+    }
 }

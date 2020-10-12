@@ -14,4 +14,9 @@ person:
     -sex: 男
 person2:
   name: 某某字符串\n不需要加引号
+person3:
+  name: 某某字
+  age: 18
+  height: 175.5
+oneYmlConfig: "just a yaml config"
 
