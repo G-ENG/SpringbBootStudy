@@ -19,4 +19,11 @@ person3:
   age: 18
   height: 175.5
 oneYmlConfig: "just a yaml config"
-
+spring:
+  profiles: default
+---
+person:
+  name: 测试profile
+  age: 180
+spring:
+  profiles: test

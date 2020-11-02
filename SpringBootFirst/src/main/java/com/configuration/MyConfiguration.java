@@ -8,6 +8,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 2.8.5 Third-party Configuration
+ * As well as using @ConfigurationProperties to annotate a class, you can also use it on public @Bean methods. Doing so can be particularly useful when you want to bind properties to third-party components that are outside of your control.
+ *
+ * To configure a bean from the Environment properties, add @ConfigurationProperties to its bean registration, as shown in the following example:
+ *
+ *
  * @ClassName MyConfiguration
  * @Description 配置类
  * @Author ceaome

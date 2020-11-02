@@ -2,7 +2,12 @@ package com.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-import java.util.*;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.Max;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @ClassName YamlModel
@@ -12,8 +17,10 @@ import java.util.*;
  **/
 @Component
 @ConfigurationProperties("person")
+@Validated
 public class YamlPropertiesBindModel {
     private String name;
+    @Max(value = 100,message = "绑定失败，年龄不能超过100岁")
     private int age;
     private double height;
     private Date birth;
