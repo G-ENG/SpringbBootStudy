@@ -11,4 +11,9 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LogParam1 {
+    TypeEnum type();
+    public static enum TypeEnum {
+            ADD,
+            DELETE
+    }
 }

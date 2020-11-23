@@ -9,7 +9,7 @@ import com.aop.log.LogParam1;
  * @Date 2020/11/23
  **/
 public class User {
-    @LogParam1
+    @LogParam1(type = LogParam1.TypeEnum.ADD)
     private String name;
     private String age;
 

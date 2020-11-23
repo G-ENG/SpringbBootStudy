@@ -15,7 +15,7 @@ import java.util.concurrent.BlockingQueue;
  **/
 public class LogConsumer implements Runnable {
     private BlockingQueue<User> blockingQueue;
-    private static List<User> userList = new LinkedList<>();
+    private List<User> userList = new LinkedList<>();
 
     public LogConsumer(BlockingQueue<User> blockingQueue) {
         this.blockingQueue = blockingQueue;
@@ -46,6 +46,7 @@ public class LogConsumer implements Runnable {
             Thread.currentThread().interrupt();
         } finally {
             System.out.println("退出消费者线程！");
+            System.out.println("hello");
         }
     }
 
