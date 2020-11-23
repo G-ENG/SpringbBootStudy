@@ -6,6 +6,7 @@ package com.grf.stream;
  * @Author GenG
  * @Date 2020/10/27
  **/
+
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
@@ -105,11 +106,11 @@ public class ExecuteUtil {
                 .filter(CollectionUtils::isNotEmpty)
                 .reduce(new ArrayList<V>(), ((list1, list2) -> {
                     List<V> resultList = new ArrayList<>();
-                    if(CollectionUtils.isNotEmpty(list1)){
+                    if (CollectionUtils.isNotEmpty(list1)) {
                         resultList.addAll(list1);
                     }
 
-                    if(CollectionUtils.isNotEmpty(list2)){
+                    if (CollectionUtils.isNotEmpty(list2)) {
                         resultList.addAll(list2);
                     }
                     return resultList;
